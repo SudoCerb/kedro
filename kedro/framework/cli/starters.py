@@ -348,6 +348,7 @@ def _get_add_ons_text(add_ons):
         "3": "Custom Logging",
         "4": "Documentation",
         "5": "Data structure",
+        "6": "PySpark",
     }
     add_ons_list = parse_add_ons_input(add_ons)
     add_ons_text = [add_ons_dict[add_on] for add_on in add_ons_list]
@@ -356,13 +357,15 @@ def _get_add_ons_text(add_ons):
         + f" and {add_ons_text[-1]}"
     )
 
+
 def fetch_template_based_on_add_ons(template_path, cookiecutter_args: dict[str, Any]):
     extra_context = cookiecutter_args["extra_context"]
     add_ons = extra_context.get("add_ons")
 
     if add_ons == "6":
-        cookiecutter_args["directory"] = "spaceflights-pyspark"
-        pyspark_path = "git+https://github.com/kedro-org/kedro-starters.git"
+        # cookiecutter_args["directory"] = "spaceflights-pyspark"
+        # pyspark_path = "git+https://github.com/kedro-org/kedro-starters.git"
+        pyspark_path = "/Users/merel_theisen/Projects/kedro-starters/spaceflights-pyspark"
         return pyspark_path
     return template_path
 
