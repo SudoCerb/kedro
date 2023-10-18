@@ -159,7 +159,6 @@ import click
 from kedro.framework.cli.project import (
     ASYNC_ARG_HELP,
     CONFIG_FILE_HELP,
-    CONF_SOURCE_HELP,
     FROM_INPUTS_HELP,
     FROM_NODES_HELP,
     LOAD_VERSION_HELP,
@@ -180,7 +179,6 @@ from kedro.framework.cli.utils import (
     _split_params,
     env_option,
     split_string,
-    split_node_names,
 )
 from kedro.framework.session import KedroSession
 from kedro.utils import load_obj
